@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>All-in-One Web App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header><h1>All-in-One Tools</h1></header>
+  <main class="container">
+    <!-- Login Screen -->
+    <section id="login-screen" class="section active">
+      <div class="card">
+        <h2>Login / Sign-Up</h2>
+        <input id="login-user" placeholder="Username or Email" />
+        <input id="login-pass" type="password" placeholder="Password" />
+        <button id="btn-login">Login / Signup</button>
+      </div>
+    </section>
+
+    <!-- Dashboard -->
+    <section id="dashboard" class="section">
+      <div class="card">
+        <h2>Welcome, <span id="dash-user"></span></h2>
+        <p>Joined at <span id="dash-time"></span></p>
+        <div class="grid">
+          <button data-view="currency">Currency Converter</button>
+          <button data-view="iginfo">IG Info</button>
+          <button data-view="ytinfo">YT Info</button>
+          <button data-view="videodl">Video Downloader</button>
+          <button data-view="ipinfo">IP Info</button>
+          <button data-view="admin">Admin Panel</button>
+        </div>
+        <button id="btn-logout">Logout</button>
+      </div>
+    </section>
+
+    <!-- Tools -->
+    <section id="currency" class="section tool">
+      <div class="card">
+        <h2>Currency Converter</h2>
+        <input id="cur-amount" type="number" placeholder="Amount" />
+        <select id="cur-from"><option>USD</option><option>EUR</option><option>INR</option></select>
+        <select id="cur-to"><option>EUR</option><option>USD</option><option>INR</option></select>
+        <button id="cur-convert">Convert</button>
+        <p id="cur-result"></p>
+        <button class="btn-back">← Back</button>
+      </div>
+    </section>
+
+    <section id="iginfo" class="section tool">
+      <div class="card">
+        <h2>Instagram Info</h2>
+        <input id="ig-user" placeholder="Instagram username" />
+        <button id="ig-fetch">Get Info</button>
+        <pre id="ig-result"></pre>
+        <button class="btn-back">← Back</button>
+      </div>
+    </section>
+
+    <section id="ytinfo" class="section tool">
+      <div class="card">
+        <h2>YouTube Info</h2>
+        <input id="yt-url" placeholder="YouTube URL or ID" />
+        <button id="yt-fetch">Get Info</button>
+        <pre id="yt-result"></pre>
+        <button class="btn-back">← Back</button>
+      </div>
+    </section>
+
+    <section id="videodl" class="section tool">
+      <div class="card">
+        <h2>Video Downloader (IG/YT)</h2>
+        <input id="dl-url" placeholder="Video URL" />
+        <button id="dl-fetch">Download</button>
+        <p id="dl-result"></p>
+        <button class="btn-back">← Back</button>
+      </div>
+    </section>
+
+    <section id="ipinfo" class="section tool">
+      <div class="card">
+        <h2>IP Info</h2>
+        <input id="ip-input" placeholder="IP or leave blank" />
+        <button id="ip-fetch">Lookup</button>
+        <pre id="ip-result"></pre>
+        <button class="btn-back">← Back</button>
+      </div>
+    </section>
+
+    <section id="admin" class="section tool">
+      <div class="card">
+        <h2>Admin Panel - Registered Users</h2>
+        <table>
+          <thead><tr><th>#</th><th>User</th><th>Joined</th></tr></thead>
+          <tbody id="admin-table"></tbody>
+        </table>
+        <button class="btn-back">← Back</button>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
